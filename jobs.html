@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apiaro Jobs — APIARO</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="loading-screen"><div class="loader"><div class="loader-ring"></div><div class="loader-text">APIARO</div></div></div>
+
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo"><span class="logo-icon">A</span><span class="logo-text">APIARO</span></a>
+            <div class="nav-links" id="navLinks">
+                <a href="index.html">Home</a><a href="dashboard.html">Ecosystem</a><a href="shop.html">Shop</a><a href="music.html">Music</a><a href="connect.html">Connect</a><a href="ai.html">AI</a><a href="jobs.html" class="active">Jobs</a><a href="learn.html">Learn</a><a href="pay.html">Pay</a><a href="cloud.html">Cloud</a>
+            </div>
+            <div class="nav-actions">
+                <div class="search-box"><i class="fas fa-search"></i><input type="text" placeholder="Search..." id="globalSearch"></div>
+                <button class="theme-toggle" id="themeToggle"><i class="fas fa-moon"></i></button>
+                <div class="notification-bell" id="notificationBell"><i class="fas fa-bell"></i></div>
+                <div class="user-menu" id="userMenu"><img src="https://ui-avatars.com/api/?name=User&background=F57C00&color=fff" alt="User" class="avatar"></div>
+                <button class="mobile-toggle" id="mobileToggle"><i class="fas fa-bars"></i></button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="jobs-page">
+        <div class="jobs-hero">
+            <div class="container">
+                <div class="coming-soon-badge">
+                    <span class="pulse-dot"></span>
+                    Coming Soon
+                </div>
+                <h1>Apiaro Jobs</h1>
+                <p>Find your dream career and connect with top employers worldwide. We're building the future of work.</p>
+                <div class="launch-countdown">
+                    <div class="countdown-item">
+                        <span class="countdown-number" id="days">45</span>
+                        <span class="countdown-label">Days</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span class="countdown-number" id="hours">12</span>
+                        <span class="countdown-label">Hours</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span class="countdown-number" id="minutes">30</span>
+                        <span class="countdown-label">Minutes</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span class="countdown-number" id="seconds">00</span>
+                        <span class="countdown-label">Seconds</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <section class="job-categories">
+                <h2>Job Categories</h2>
+                <div class="categories-grid">
+                    <div class="category-card">
+                        <i class="fas fa-laptop-code"></i>
+                        <h4>Technology</h4>
+                        <p>Software Engineering, DevOps, Data Science</p>
+                    </div>
+                    <div class="category-card">
+                        <i class="fas fa-paint-brush"></i>
+                        <h4>Design</h4>
+                        <p>UX/UI, Graphic Design, Motion Graphics</p>
+                    </div>
+                    <div class="category-card">
+                        <i class="fas fa-chart-line"></i>
+                        <h4>Marketing</h4>
+                        <p>Digital Marketing, SEO, Content Strategy</p>
+                    </div>
+                    <div class="category-card">
+                        <i class="fas fa-briefcase"></i>
+                        <h4>Business</h4>
+                        <p>Product Management, Sales, Operations</p>
+                    </div>
+                    <div class="category-card">
+                        <i class="fas fa-heartbeat"></i>
+                        <h4>Healthcare</h4>
+                        <p>Medical, Nursing, Health Tech</p>
+                    </div>
+                    <div class="category-card">
+                        <i class="fas fa-graduation-cap"></i>
+                        <h4>Education</h4>
+                        <p>Teaching, Curriculum, EdTech</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="subscribe-section">
+                <div class="subscribe-card">
+                    <div class="subscribe-content">
+                        <h2>Be the First to Know</h2>
+                        <p>Subscribe to get early access and exclusive job listings when we launch.</p>
+                        <form class="subscribe-form" id="subscribeForm">
+                            <input type="email" placeholder="Enter your email address" required>
+                            <button type="submit" class="btn btn-primary btn-lg">Notify Me</button>
+                        </form>
+                        <p class="subscribe-note">Join 50,000+ professionals waiting for launch.</p>
+                    </div>
+                    <div class="subscribe-visual">
+                        <div class="career-illustration">
+                            <div class="illustration-circle"></div>
+                            <div class="illustration-circle"></div>
+                            <div class="illustration-circle"></div>
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p> 2026 APIARO. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <button class="scroll-top" id="scrollTop"><i class="fas fa-arrow-up"></i></button>
+    <script src="js/app.js"></script>
+</body>
+</html>

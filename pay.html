@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apiaro Pay — APIARO</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="loading-screen"><div class="loader"><div class="loader-ring"></div><div class="loader-text">APIARO</div></div></div>
+
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo"><span class="logo-icon">A</span><span class="logo-text">APIARO</span></a>
+            <div class="nav-links" id="navLinks">
+                <a href="index.html">Home</a><a href="dashboard.html">Ecosystem</a><a href="shop.html">Shop</a><a href="music.html">Music</a><a href="connect.html">Connect</a><a href="ai.html">AI</a><a href="jobs.html">Jobs</a><a href="learn.html">Learn</a><a href="pay.html" class="active">Pay</a><a href="cloud.html">Cloud</a>
+            </div>
+            <div class="nav-actions">
+                <div class="search-box"><i class="fas fa-search"></i><input type="text" placeholder="Search..." id="globalSearch"></div>
+                <button class="theme-toggle" id="themeToggle"><i class="fas fa-moon"></i></button>
+                <div class="notification-bell" id="notificationBell"><i class="fas fa-bell"></i></div>
+                <div class="user-menu" id="userMenu"><img src="https://ui-avatars.com/api/?name=User&background=F57C00&color=fff" alt="User" class="avatar"></div>
+                <button class="mobile-toggle" id="mobileToggle"><i class="fas fa-bars"></i></button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="pay-page">
+        <div class="container">
+            <div class="pay-layout">
+                <div class="pay-main">
+                    <div class="wallet-card">
+                        <div class="wallet-header">
+                            <div>
+                                <h3>Total Balance</h3>
+                                <h2 class="balance-amount">$12,450.00</h2>
+                            </div>
+                            <div class="wallet-actions">
+                                <button class="btn btn-light"><i class="fas fa-plus"></i> Add</button>
+                                <button class="btn btn-outline-light"><i class="fas fa-paper-plane"></i> Send</button>
+                            </div>
+                        </div>
+                        <div class="wallet-chart">
+                            <div class="chart-bar" style="height: 40%"></div>
+                            <div class="chart-bar" style="height: 65%"></div>
+                            <div class="chart-bar" style="height: 45%"></div>
+                            <div class="chart-bar" style="height: 80%"></div>
+                            <div class="chart-bar" style="height: 55%"></div>
+                            <div class="chart-bar" style="height: 90%"></div>
+                            <div class="chart-bar" style="height: 70%"></div>
+                        </div>
+                    </div>
+
+                    <div class="payment-cards-section">
+                        <h3>Payment Cards</h3>
+                        <div class="payment-cards">
+                            <div class="payment-card active">
+                                <div class="card-chip"></div>
+                                <div class="card-number">•••• •••• •••• 4521</div>
+                                <div class="card-footer">
+                                    <span>John Doe</span>
+                                    <span class="card-brand"><i class="fab fa-cc-visa"></i></span>
+                                </div>
+                            </div>
+                            <div class="payment-card">
+                                <div class="card-chip"></div>
+                                <div class="card-number">•••• •••• •••• 8890</div>
+                                <div class="card-footer">
+                                    <span>John Doe</span>
+                                    <span class="card-brand"><i class="fab fa-cc-mastercard"></i></span>
+                                </div>
+                            </div>
+                            <button class="add-card-btn"><i class="fas fa-plus"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="transactions-section">
+                        <h3>Recent Transactions</h3>
+                        <div class="transactions-list">
+                            <div class="transaction-item">
+                                <div class="transaction-icon income"><i class="fas fa-arrow-down"></i></div>
+                                <div class="transaction-info">
+                                    <h4>Salary Deposit</h4>
+                                    <p>Today, 9:00 AM</p>
+                                </div>
+                                <span class="transaction-amount positive">+$5,000.00</span>
+                            </div>
+                            <div class="transaction-item">
+                                <div class="transaction-icon expense"><i class="fas fa-shopping-bag"></i></div>
+                                <div class="transaction-info">
+                                    <h4>Apiaro Shop</h4>
+                                    <p>Yesterday, 3:45 PM</p>
+                                </div>
+                                <span class="transaction-amount negative">-$299.00</span>
+                            </div>
+                            <div class="transaction-item">
+                                <div class="transaction-icon expense"><i class="fas fa-music"></i></div>
+                                <div class="transaction-info">
+                                    <h4>Apiaro Music Premium</h4>
+                                    <p>Jul 15, 2026</p>
+                                </div>
+                                <span class="transaction-amount negative">-$9.99</span>
+                            </div>
+                            <div class="transaction-item">
+                                <div class="transaction-icon income"><i class="fas fa-arrow-down"></i></div>
+                                <div class="transaction-info">
+                                    <h4>Refund - Order #4521</h4>
+                                    <p>Jul 14, 2026</p>
+                                </div>
+                                <span class="transaction-amount positive">+$79.00</span>
+                            </div>
+                            <div class="transaction-item">
+                                <div class="transaction-icon expense"><i class="fas fa-graduation-cap"></i></div>
+                                <div class="transaction-info">
+                                    <h4>Apiaro Learn</h4>
+                                    <p>Jul 12, 2026</p>
+                                </div>
+                                <span class="transaction-amount negative">-$89.00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pay-sidebar">
+                    <div class="qr-section">
+                        <h3>Quick Pay</h3>
+                        <div class="qr-card">
+                            <div class="qr-code">
+                                <div class="qr-pattern"></div>
+                            </div>
+                            <p>Scan to pay instantly</p>
+                        </div>
+                    </div>
+
+                    <div class="analytics-cards">
+                        <h3>Analytics</h3>
+                        <div class="analytics-grid">
+                            <div class="analytics-card">
+                                <i class="fas fa-arrow-up"></i>
+                                <span class="analytics-value">+$8,200</span>
+                                <span class="analytics-label">Income</span>
+                            </div>
+                            <div class="analytics-card">
+                                <i class="fas fa-arrow-down"></i>
+                                <span class="analytics-value">-$2,150</span>
+                                <span class="analytics-label">Expenses</span>
+                            </div>
+                            <div class="analytics-card">
+                                <i class="fas fa-piggy-bank"></i>
+                                <span class="analytics-value">$6,050</span>
+                                <span class="analytics-label">Savings</span>
+                            </div>
+                            <div class="analytics-card">
+                                <i class="fas fa-chart-pie"></i>
+                                <span class="analytics-value">74%</span>
+                                <span class="analytics-label">Budget</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p> 2026 APIARO. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <button class="scroll-top" id="scrollTop"><i class="fas fa-arrow-up"></i></button>
+    <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APIARO — One Platform. Infinite Possibilities.</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loader">
+            <div class="loader-ring"></div>
+            <div class="loader-text">APIARO</div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">A</span>
+                <span class="logo-text">APIARO</span>
+            </a>
+            
+            <div class="nav-links" id="navLinks">
+                <a href="index.html" class="active">Home</a>
+                <a href="dashboard.html">Ecosystem</a>
+                <a href="shop.html">Shop</a>
+                <a href="music.html">Music</a>
+                <a href="connect.html">Connect</a>
+                <a href="ai.html">AI</a>
+                <a href="jobs.html">Jobs</a>
+                <a href="learn.html">Learn</a>
+                <a href="pay.html">Pay</a>
+                <a href="cloud.html">Cloud</a>
+            </div>
+
+            <div class="nav-actions">
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search APIARO..." id="globalSearch">
+                </div>
+                <button class="theme-toggle" id="themeToggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <div class="notification-bell" id="notificationBell">
+                    <i class="fas fa-bell"></i>
+                    <span class="badge">3</span>
+                    <div class="notification-dropdown" id="notificationDropdown">
+                        <div class="notification-header">
+                            <h4>Notifications</h4>
+                            <span>Mark all read</span>
+                        </div>
+                        <div class="notification-item unread">
+                            <i class="fas fa-shopping-bag"></i>
+                            <div>
+                                <p>Your order has been shipped!</p>
+                                <span>2 min ago</span>
+                            </div>
+                        </div>
+                        <div class="notification-item unread">
+                            <i class="fas fa-music"></i>
+                            <div>
+                                <p>New album from your favorite artist</p>
+                                <span>1 hour ago</span>
+                            </div>
+                        </div>
+                        <div class="notification-item">
+                            <i class="fas fa-user-plus"></i>
+                            <div>
+                                <p>John Doe started following you</p>
+                                <span>3 hours ago</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="user-menu" id="userMenu">
+                    <img src="https://ui-avatars.com/api/?name=User&background=F57C00&color=fff" alt="User" class="avatar">
+                    <div class="user-dropdown" id="userDropdown">
+                        <div class="user-header">
+                            <img src="https://ui-avatars.com/api/?name=User&background=F57C00&color=fff" alt="User">
+                            <div>
+                                <h4>Welcome back</h4>
+                                <p>user@apiaro.com</p>
+                            </div>
+                        </div>
+                        <a href="#"><i class="fas fa-user"></i> Profile</a>
+                        <a href="#"><i class="fas fa-cog"></i> Settings</a>
+                        <a href="#"><i class="fas fa-wallet"></i> Wallet</a>
+                        <div class="divider"></div>
+                        <a href="#" class="logout"><i class="fas fa-sign-out-alt"></i> Sign Out</a>
+                    </div>
+                </div>
+                <button class="mobile-toggle" id="mobileToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg">
+            <div class="gradient-orb orb-1"></div>
+            <div class="gradient-orb orb-2"></div>
+            <div class="gradient-orb orb-3"></div>
+            <div class="grid-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="pulse-dot"></span>
+                The Future of Digital Ecosystems
+            </div>
+            <h1 class="hero-title">
+                <span class="apiaro-brand">APIARO</span>
+            </h1>
+            <p class="hero-tagline" id="typingText"></p>
+            <p class="hero-description">
+                Experience the next generation of integrated digital services. 
+                From shopping to streaming, social to AI — everything you need, unified in one powerful platform.
+            </p>
+            <div class="hero-buttons">
+                <a href="dashboard.html" class="btn btn-primary btn-lg ripple">
+                    <span>Explore Ecosystem</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+                <a href="#features" class="btn btn-outline btn-lg">
+                    <i class="fas fa-play"></i>
+                    <span>Watch Demo</span>
+                </a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-number" data-target="10">0</span>
+                    <span class="stat-suffix">M+</span>
+                    <span class="stat-label">Active Users</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="8">0</span>
+                    <span class="stat-suffix"></span>
+                    <span class="stat-label">Products</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="99">0</span>
+                    <span class="stat-suffix">.9%</span>
+                    <span class="stat-label">Uptime</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="150">0</span>
+                    <span class="stat-suffix">+</span>
+                    <span class="stat-label">Countries</span>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <span>Scroll to explore</span>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Features</span>
+                <h2>Everything You Need in One Place</h2>
+                <p>APIARO brings together the best digital services into a seamless, unified experience.</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card" data-delay="0">
+                    <div class="feature-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <h3>Apiaro Shop</h3>
+                    <p>Discover millions of products from top brands with AI-powered recommendations and seamless checkout.</p>
+                    <a href="shop.html" class="feature-link">Explore Shop <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="feature-card" data-delay="100">
+                    <div class="feature-icon">
+                        <i class="fas fa-music"></i>
+                    </div>
+                    <h3>Apiaro Music</h3>
+                    <p>Stream millions of songs, create playlists, and discover new artists with our intelligent music engine.</p>
+                    <a href="music.html" class="feature-link">Explore Music <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="feature-card" data-delay="200">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Apiaro Connect</h3>
+                    <p>Connect with friends, join communities, and share your world on our next-gen social platform.</p>
+                    <a href="connect.html" class="feature-link">Explore Connect <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="feature-card" data-delay="300">
+                    <div class="feature-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>Apiaro AI</h3>
+                    <p>Harness the power of artificial intelligence for productivity, creativity, and problem-solving.</p>
+                    <a href="ai.html" class="feature-link">Explore AI <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="feature-card" data-delay="400">
+                    <div class="feature-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Apiaro Learn</h3>
+                    <p>Master new skills with expert-led courses, interactive lessons, and personalized learning paths.</p>
+                    <a href="learn.html" class="feature-link">Explore Learn <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="feature-card" data-delay="500">
+                    <div class="feature-icon">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <h3>Apiaro Cloud</h3>
+                    <p>Deploy, scale, and manage your applications with enterprise-grade cloud infrastructure.</p>
+                    <a href="cloud.html" class="feature-link">Explore Cloud <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Overview -->
+    <section class="services-overview">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Services</span>
+                <h2>Our Ecosystem at a Glance</h2>
+            </div>
+            <div class="services-showcase">
+                <div class="service-showcase-item">
+                    <div class="showcase-content">
+                        <span class="showcase-tag">Commerce</span>
+                        <h3>Shop Without Limits</h3>
+                        <p>Browse millions of products, track orders in real-time, and enjoy AI-curated shopping experiences tailored just for you.</p>
+                        <ul class="showcase-features">
+                            <li><i class="fas fa-check"></i> AI-powered recommendations</li>
+                            <li><i class="fas fa-check"></i> One-click checkout</li>
+                            <li><i class="fas fa-check"></i> Real-time order tracking</li>
+                        </ul>
+                        <a href="shop.html" class="btn btn-primary">Start Shopping</a>
+                    </div>
+                    <div class="showcase-visual">
+                        <div class="showcase-card">
+                            <div class="card-header">
+                                <span class="live-badge">LIVE</span>
+                                <i class="fas fa-shopping-bag"></i>
+                            </div>
+                            <div class="card-body">
+                                <div class="product-mini">
+                                    <div class="mini-img"></div>
+                                    <div class="mini-info">
+                                        <h5>Wireless Headphones</h5>
+                                        <span class="price">$299</span>
+                                    </div>
+                                </div>
+                                <div class="product-mini">
+                                    <div class="mini-img"></div>
+                                    <div class="mini-info">
+                                        <h5>Smart Watch Pro</h5>
+                                        <span class="price">$449</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Testimonials</span>
+                <h2>Loved by Millions Worldwide</h2>
+            </div>
+            <div class="testimonials-carousel" id="testimonialsCarousel">
+                <div class="testimonial-track">
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"APIARO transformed how I manage my digital life. Having everything in one place is a game-changer."</p>
+                        <div class="testimonial-author">
+                            <img src="https://ui-avatars.com/api/?name=Sarah+M&background=667eea&color=fff" alt="Sarah">
+                            <div>
+                                <h4>Sarah Mitchell</h4>
+                                <span>Product Designer</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"The music streaming quality is incredible. I've discovered so many new artists through Apiaro Music."</p>
+                        <div class="testimonial-author">
+                            <img src="https://ui-avatars.com/api/?name=James+C&background=F57C00&color=fff" alt="James">
+                            <div>
+                                <h4>James Chen</h4>
+                                <span>Music Producer</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <p>"As a developer, Apiaro Cloud gives me everything I need to deploy and scale my applications effortlessly."</p>
+                        <div class="testimonial-author">
+                            <img src="https://ui-avatars.com/api/?name=Alex+R&background=764ba2&color=fff" alt="Alex">
+                            <div>
+                                <h4>Alex Rodriguez</h4>
+                                <span>Software Engineer</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">FAQ</span>
+                <h2>Frequently Asked Questions</h2>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>What is APIARO and how does it work?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>APIARO is a unified digital ecosystem that brings together shopping, music streaming, social networking, AI assistance, and cloud services into one seamless platform. Create one account and access all services instantly.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Is APIARO free to use?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes! APIARO offers a generous free tier for all services. Premium features and subscriptions are available for users who want enhanced capabilities, ad-free experiences, and exclusive content.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>How secure is my data on APIARO?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Security is our top priority. We use end-to-end encryption, two-factor authentication, and comply with GDPR and CCPA regulations. Your data is never sold to third parties.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Can I use APIARO on mobile devices?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Absolutely! APIARO is fully responsive and works beautifully on desktop, tablet, and mobile. Native apps for iOS and Android are also available for download.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>How do I become a seller on Apiaro Shop?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Simply navigate to the Shop section and click "Become a Seller." Complete the verification process, set up your store, and start listing products. We provide tools for inventory management, analytics, and marketing.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-card">
+                <div class="cta-content">
+                    <h2>Ready to Experience the Future?</h2>
+                    <p>Join millions of users who have already discovered the power of a unified digital ecosystem.</p>
+                    <a href="dashboard.html" class="btn btn-light btn-lg ripple">Get Started Free</a>
+                </div>
+                <div class="cta-decoration">
+                    <div class="orbit-ring"></div>
+                    <div class="orbit-ring"></div>
+                    <div class="orbit-ring"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <span class="logo-icon">A</span>
+                        <span class="logo-text">APIARO</span>
+                    </a>
+                    <p>One Platform. Infinite Possibilities.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Products</h4>
+                    <a href="shop.html">Apiaro Shop</a>
+                    <a href="music.html">Apiaro Music</a>
+                    <a href="connect.html">Apiaro Connect</a>
+                    <a href="ai.html">Apiaro AI</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <a href="#">About Us</a>
+                    <a href="#">Careers</a>
+                    <a href="#">Press</a>
+                    <a href="#">Blog</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Support</h4>
+                    <a href="#">Help Center</a>
+                    <a href="#">Contact Us</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+                <div class="footer-newsletter">
+                    <h4>Stay Updated</h4>
+                    <p>Subscribe to our newsletter for the latest updates.</p>
+                    <form class="newsletter-form" id="newsletterForm">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit" class="btn btn-primary"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p> 2026 APIARO. All rights reserved.</p>
+                <div class="footer-lang">
+                    <i class="fas fa-globe"></i>
+                    <span>English</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top -->
+    <button class="scroll-top" id="scrollTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

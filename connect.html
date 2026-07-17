@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apiaro Connect — APIARO</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="loading-screen"><div class="loader"><div class="loader-ring"></div><div class="loader-text">APIARO</div></div></div>
+
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo"><span class="logo-icon">A</span><span class="logo-text">APIARO</span></a>
+            <div class="nav-links" id="navLinks">
+                <a href="index.html">Home</a><a href="dashboard.html">Ecosystem</a><a href="shop.html">Shop</a><a href="music.html">Music</a><a href="connect.html" class="active">Connect</a><a href="ai.html">AI</a><a href="jobs.html">Jobs</a><a href="learn.html">Learn</a><a href="pay.html">Pay</a><a href="cloud.html">Cloud</a>
+            </div>
+            <div class="nav-actions">
+                <div class="search-box"><i class="fas fa-search"></i><input type="text" placeholder="Search..." id="globalSearch"></div>
+                <button class="theme-toggle" id="themeToggle"><i class="fas fa-moon"></i></button>
+                <div class="notification-bell" id="notificationBell"><i class="fas fa-bell"></i><span class="badge">5</span></div>
+                <div class="user-menu" id="userMenu"><img src="https://ui-avatars.com/api/?name=User&background=F57C00&color=fff" alt="User" class="avatar"></div>
+                <button class="mobile-toggle" id="mobileToggle"><i class="fas fa-bars"></i></button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="connect-page">
+        <div class="connect-layout">
+            <aside class="connect-sidebar">
+                <div class="sidebar-profile">
+                    <img src="https://ui-avatars.com/api/?name=User&background=F57C00&color=fff" alt="User">
+                    <h4>Your Name</h4>
+                    <p>@username</p>
+                </div>
+                <nav class="sidebar-nav">
+                    <a href="#" class="active"><i class="fas fa-home"></i> Feed</a>
+                    <a href="#"><i class="fas fa-user-friends"></i> Friends</a>
+                    <a href="#"><i class="fas fa-users"></i> Communities</a>
+                    <a href="#"><i class="fas fa-envelope"></i> Messages</a>
+                    <a href="#"><i class="fas fa-bookmark"></i> Saved</a>
+                    <a href="#"><i class="fas fa-chart-bar"></i> Analytics</a>
+                </nav>
+            </aside>
+
+            <div class="connect-feed">
+                <div class="stories-row">
+                    <div class="story add-story"><i class="fas fa-plus"></i><span>Add Story</span></div>
+                    <div class="story" style="background: linear-gradient(135deg, #667eea, #764ba2);"><span class="story-avatar">JD</span><span>John</span></div>
+                    <div class="story" style="background: linear-gradient(135deg, #f093fb, #f5576c);"><span class="story-avatar">SM</span><span>Sarah</span></div>
+                    <div class="story" style="background: linear-gradient(135deg, #4facfe, #00f2fe);"><span class="story-avatar">AC</span><span>Alex</span></div>
+                    <div class="story" style="background: linear-gradient(135deg, #43e97b, #38f9d7);"><span class="story-avatar">EM</span><span>Emma</span></div>
+                    <div class="story" style="background: linear-gradient(135deg, #fa709a, #fee140);"><span class="story-avatar">MK</span><span>Mike</span></div>
+                </div>
+
+                <div class="create-post">
+                    <div class="create-post-input">
+                        <img src="https://ui-avatars.com/api/?name=User&background=F57C00&color=fff" alt="User">
+                        <input type="text" placeholder="What's on your mind?">
+                    </div>
+                    <div class="create-post-actions">
+                        <button><i class="fas fa-image"></i> Photo</button>
+                        <button><i class="fas fa-video"></i> Video</button>
+                        <button><i class="fas fa-smile"></i> Feeling</button>
+                        <button class="btn btn-primary btn-sm">Post</button>
+                    </div>
+                </div>
+
+                <div class="posts-feed">
+                    <div class="post-card">
+                        <div class="post-header">
+                            <img src="https://ui-avatars.com/api/?name=John+Doe&background=667eea&color=fff" alt="John">
+                            <div><h4>John Doe</h4><span>2 hours ago</span></div>
+                            <button class="post-more"><i class="fas fa-ellipsis-h"></i></button>
+                        </div>
+                        <div class="post-content">
+                            <p>Just launched my new design portfolio! Check it out and let me know what you think. Really excited about this new chapter! 🎨✨</p>
+                            <div class="post-image" style="background: linear-gradient(135deg, #667eea, #764ba2);"></div>
+                        </div>
+                        <div class="post-actions">
+                            <button class="like-btn"><i class="far fa-heart"></i> <span>234</span></button>
+                            <button><i class="far fa-comment"></i> <span>45</span></button>
+                            <button><i class="fas fa-share"></i> <span>12</span></button>
+                        </div>
+                    </div>
+
+                    <div class="post-card">
+                        <div class="post-header">
+                            <img src="https://ui-avatars.com/api/?name=Sarah+M&background=F57C00&color=fff" alt="Sarah">
+                            <div><h4>Sarah Mitchell</h4><span>4 hours ago</span></div>
+                            <button class="post-more"><i class="fas fa-ellipsis-h"></i></button>
+                        </div>
+                        <div class="post-content">
+                            <p>Beautiful sunset from my weekend trip! Nature never fails to amaze me. 🌅</p>
+                            <div class="post-image" style="background: linear-gradient(135deg, #fa709a, #fee140);"></div>
+                        </div>
+                        <div class="post-actions">
+                            <button class="like-btn"><i class="far fa-heart"></i> <span>892</span></button>
+                            <button><i class="far fa-comment"></i> <span>67</span></button>
+                            <button><i class="fas fa-share"></i> <span>23</span></button>
+                        </div>
+                    </div>
+
+                    <div class="post-card">
+                        <div class="post-header">
+                            <img src="https://ui-avatars.com/api/?name=Tech+Daily&background=43e97b&color=fff" alt="Tech">
+                            <div><h4>Tech Daily</h4><span>6 hours ago</span></div>
+                            <button class="post-more"><i class="fas fa-ellipsis-h"></i></button>
+                        </div>
+                        <div class="post-content">
+                            <p>The future of AI is here! New breakthroughs in machine learning are changing how we interact with technology. What are your thoughts on AI advancement? 🤖</p>
+                        </div>
+                        <div class="post-actions">
+                            <button class="like-btn"><i class="far fa-heart"></i> <span>1.2K</span></button>
+                            <button><i class="far fa-comment"></i> <span>340</span></button>
+                                                        <button><i class="fas fa-share"></i> <span>89</span></button>
+                        </div>
+                    </div>
+
+                    <div class="post-card">
+                        <div class="post-header">
+                            <img src="https://ui-avatars.com/api/?name=Alex+R&background=4facfe&color=fff" alt="Alex">
+                            <div><h4>Alex Rodriguez</h4><span>8 hours ago</span></div>
+                            <button class="post-more"><i class="fas fa-ellipsis-h"></i></button>
+                        </div>
+                        <div class="post-content">
+                            <p>Just deployed my first app on Apiaro Cloud! The experience was seamless and the performance is incredible. Highly recommend checking it out for your next project. ☁️🚀</p>
+                            <div class="post-image" style="background: linear-gradient(135deg, #4facfe, #00f2fe);"></div>
+                        </div>
+                        <div class="post-actions">
+                            <button class="like-btn"><i class="far fa-heart"></i> <span>456</span></button>
+                            <button><i class="far fa-comment"></i> <span>78</span></button>
+                            <button><i class="fas fa-share"></i> <span>34</span></button>
+                        </div>
+                    </div>
+
+                    <div class="post-card">
+                        <div class="post-header">
+                            <img src="https://ui-avatars.com/api/?name=Emma+W&background=f093fb&color=fff" alt="Emma">
+                            <div><h4>Emma Wilson</h4><span>12 hours ago</span></div>
+                            <button class="post-more"><i class="fas fa-ellipsis-h"></i></button>
+                        </div>
+                        <div class="post-content">
+                            <p>Finally finished my marathon training! 26.2 miles of pure determination. Thanks to everyone who supported me along the way! 🏃‍♀️🏅</p>
+                        </div>
+                        <div class="post-actions">
+                            <button class="like-btn"><i class="far fa-heart"></i> <span>2.1K</span></button>
+                            <button><i class="far fa-comment"></i> <span>156</span></button>
+                            <button><i class="fas fa-share"></i> <span>67</span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <aside class="connect-right">
+                <div class="widget">
+                    <h4>Trending Topics</h4>
+                    <div class="trending-item">
+                        <span class="trending-tag">#Technology</span>
+                        <span class="trending-count">45.2K posts</span>
+                    </div>
+                    <div class="trending-item">
+                        <span class="trending-tag">#Music</span>
+                        <span class="trending-count">32.1K posts</span>
+                    </div>
+                    <div class="trending-item">
+                        <span class="trending-tag">#Design</span>
+                        <span class="trending-count">28.7K posts</span>
+                    </div>
+                    <div class="trending-item">
+                        <span class="trending-tag">#Travel</span>
+                        <span class="trending-count">21.3K posts</span>
+                    </div>
+                    <div class="trending-item">
+                        <span class="trending-tag">#Fitness</span>
+                        <span class="trending-count">18.9K posts</span>
+                    </div>
+                </div>
+
+                <div class="widget">
+                    <h4>Suggested Friends</h4>
+                    <div class="friend-suggestion">
+                        <img src="https://ui-avatars.com/api/?name=Mike+T&background=764ba2&color=fff" alt="Mike">
+                        <div>
+                            <h5>Mike Thompson</h5>
+                            <p>Product Manager</p>
+                        </div>
+                        <button class="btn btn-outline btn-sm"><i class="fas fa-user-plus"></i></button>
+                    </div>
+                    <div class="friend-suggestion">
+                        <img src="https://ui-avatars.com/api/?name=Lisa+K&background=F57C00&color=fff" alt="Lisa">
+                        <div>
+                            <h5>Lisa Kim</h5>
+                            <p>UX Designer</p>
+                        </div>
+                        <button class="btn btn-outline btn-sm"><i class="fas fa-user-plus"></i></button>
+                    </div>
+                    <div class="friend-suggestion">
+                        <img src="https://ui-avatars.com/api/?name=David+P&background=43e97b&color=fff" alt="David">
+                        <div>
+                            <h5>David Park</h5>
+                            <p>Developer</p>
+                        </div>
+                        <button class="btn btn-outline btn-sm"><i class="fas fa-user-plus"></i></button>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p> 2026 APIARO. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <button class="scroll-top" id="scrollTop"><i class="fas fa-arrow-up"></i></button>
+    <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apiaro AI — APIARO</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="loading-screen"><div class="loader"><div class="loader-ring"></div><div class="loader-text">APIARO</div></div></div>
+
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo"><span class="logo-icon">A</span><span class="logo-text">APIARO</span></a>
+            <div class="nav-links" id="navLinks">
+                <a href="index.html">Home</a><a href="dashboard.html">Ecosystem</a><a href="shop.html">Shop</a><a href="music.html">Music</a><a href="connect.html">Connect</a><a href="ai.html" class="active">AI</a><a href="jobs.html">Jobs</a><a href="learn.html">Learn</a><a href="pay.html">Pay</a><a href="cloud.html">Cloud</a>
+            </div>
+            <div class="nav-actions">
+                <div class="search-box"><i class="fas fa-search"></i><input type="text" placeholder="Search..." id="globalSearch"></div>
+                <button class="theme-toggle" id="themeToggle"><i class="fas fa-moon"></i></button>
+                <div class="notification-bell" id="notificationBell"><i class="fas fa-bell"></i><span class="badge">2</span></div>
+                <div class="user-menu" id="userMenu"><img src="https://ui-avatars.com/api/?name=User&background=F57C00&color=fff" alt="User" class="avatar"></div>
+                <button class="mobile-toggle" id="mobileToggle"><i class="fas fa-bars"></i></button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="ai-page">
+        <div class="ai-layout">
+            <aside class="ai-sidebar">
+                <div class="ai-sidebar-header">
+                    <h3><i class="fas fa-robot"></i> Apiaro AI</h3>
+                </div>
+                <div class="chat-history">
+                    <h4>Recent Chats</h4>
+                    <div class="chat-history-item active">
+                        <i class="fas fa-comment"></i>
+                        <div>
+                            <span class="chat-title">Creative Writing Help</span>
+                            <span class="chat-preview">How to structure a novel...</span>
+                        </div>
+                    </div>
+                    <div class="chat-history-item">
+                        <i class="fas fa-code"></i>
+                        <div>
+                            <span class="chat-title">Code Review</span>
+                            <span class="chat-preview">React component optimization</span>
+                        </div>
+                    </div>
+                    <div class="chat-history-item">
+                        <i class="fas fa-lightbulb"></i>
+                        <div>
+                            <span class="chat-title">Business Ideas</span>
+                            <span class="chat-preview">Startup strategies for 2026</span>
+                        </div>
+                    </div>
+                    <div class="chat-history-item">
+                        <i class="fas fa-chart-line"></i>
+                        <div>
+                            <span class="chat-title">Data Analysis</span>
+                            <span class="chat-preview">Market trends overview</span>
+                        </div>
+                    </div>
+                </div>
+                <button class="new-chat-btn"><i class="fas fa-plus"></i> New Chat</button>
+            </aside>
+
+            <div class="ai-chat-area">
+                <div class="ai-chat-header">
+                    <h4>Creative Writing Help</h4>
+                    <div class="ai-actions">
+                        <button><i class="fas fa-microphone"></i></button>
+                        <button><i class="fas fa-image"></i></button>
+                        <button><i class="fas fa-cog"></i></button>
+                    </div>
+                </div>
+
+                <div class="chat-messages" id="chatMessages">
+                    <div class="message ai-message">
+                        <div class="message-avatar"><i class="fas fa-robot"></i></div>
+                        <div class="message-content">
+                            <p>Hello! I'm Apiaro AI, your intelligent assistant. I can help you with writing, coding, analysis, brainstorming, and much more. What would you like to work on today?</p>
+                            <span class="message-time">Just now</span>
+                        </div>
+                    </div>
+
+                    <div class="message user-message">
+                        <div class="message-avatar"><img src="https://ui-avatars.com/api/?name=User&background=F57C00&color=fff" alt="User"></div>
+                        <div class="message-content">
+                            <p>I'm working on a sci-fi novel and need help structuring the plot. Can you give me some tips on creating compelling story arcs?</p>
+                            <span class="message-time">2 min ago</span>
+                        </div>
+                    </div>
+
+                    <div class="message ai-message">
+                        <div class="message-avatar"><i class="fas fa-robot"></i></div>
+                        <div class="message-content">
+                            <p>Absolutely! Here are some key tips for structuring compelling sci-fi story arcs:</p>
+                            <ol>
+                                <li><strong>Establish the World First:</strong> Build your universe with consistent rules before diving into plot.</li>
+                                <li><strong>The Three-Act Structure:</strong> Setup (Act 1), Confrontation (Act 2), Resolution (Act 3).</li>
+                                <li><strong>Character-Driven Conflict:</strong> Technology should serve human stories, not replace them.</li>
+                                <li><strong>Foreshadowing:</strong> Plant seeds early that pay off in surprising ways later.</li>
+                                <li><strong>Escalating Stakes:</strong> Each act should raise the stakes higher than the last.</li>
+                            </ol>
+                            <p>Would you like me to help outline a specific plot structure for your story?</p>
+                            <span class="message-time">Just now</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="suggested-prompts">
+                    <button class="prompt-chip">Help me outline a chapter</button>
+                    <button class="prompt-chip">Generate character names</button>
+                    <button class="prompt-chip">World-building ideas</button>
+                    <button class="prompt-chip">Dialogue writing tips</button>
+                </div>
+
+                <div class="chat-input-area">
+                    <button class="attach-btn"><i class="fas fa-paperclip"></i></button>
+                    <div class="chat-input-wrapper">
+                        <input type="text" placeholder="Type your message..." id="chatInput">
+                        <button class="voice-btn"><i class="fas fa-microphone"></i></button>
+                    </div>
+                    <button class="send-btn" id="sendBtn"><i class="fas fa-paper-plane"></i></button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p> 2026 APIARO. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <button class="scroll-top" id="scrollTop"><i class="fas fa-arrow-up"></i></button>
+    <script src="js/app.js"></script>
+    <script src="js/ai.js"></script>
+</body>
+</html>
