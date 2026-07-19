@@ -80,7 +80,12 @@ document.addEventListener('DOMContentLoaded', function() {
             "I can help you with a wide range of topics:\n\n💻 **Coding**: JavaScript, Python, CSS, debugging, architecture\n✍️ **Writing**: Essays, emails, creative content, editing\n📊 **Business**: Strategy, marketing, financial planning\n🎨 **Creative**: Design ideas, brainstorming, art direction\n📚 **Learning**: Study plans, explanations, resource curation\n\nJust tell me what you need!",
             "Here's what I'm good at:\n\n• Writing and editing content\n• Coding and debugging\n• Business strategy and analysis\n• Creative brainstorming\n• Learning path recommendations\n• General knowledge questions\n\nWhat would you like to explore?",
             "I'm your all-in-one assistant! Try asking me about:\n\n- Code review or writing\n- Content creation and editing\n- Business model analysis\n- Learning roadmaps\n- Creative project ideas\n- Or just chat about tech!\n\nWhat's your interest?"
-        ]
+        ],
+        // ===== PROMPT CHIP SPECIFIC RESPONSES =====
+        outlineChapter: "Here's a solid chapter outline framework:\n\n**Chapter Title**: [Hook the reader immediately]\n\n**Opening Scene** (500-800 words)\n• Start in media res — action, dialogue, or a striking image\n• Establish the POV character's emotional state\n• Introduce the central question/conflict of this chapter\n\n**Rising Action** (1,200-1,500 words)\n• Scene 1: Character faces obstacle — fails or partial win\n• Scene 2: New complication arises (raise the stakes)\n• Scene 3: Character makes a choice with consequences\n\n**Climax** (600-800 words)\n• The turning point — revelation, confrontation, or discovery\n• Emotional peak — what does the character realize?\n• Something changes irreversibly\n\n**Falling Action** (300-500 words)\n• Deal with immediate aftermath\n• Plant seeds for next chapter's conflict\n• End with a hook — unanswered question or new danger\n\n**Closing Line**: [Something that makes the reader NEED the next chapter]\n\nWant me to fill this out for a specific genre or story idea?",
+        characterNames: "Here are character names organized by vibe:\n\n**Fantasy / Epic**\n• Male: Thalion, Corvus, Elowen, Darian, Kael\n• Female: Lyra, Seraphina, Isolde, Mira, Elara\n• Surnames: Blackwood, Stormborn, Ashford, Moonwhisper\n\n**Sci-Fi / Futuristic**\n• Male: Kaelen, Zorion, Jax, Orion, Neo\n• Female: Aria, Nova, Zyla, Iris, Lyra\n• Surnames: Vance, Steele, Kova, Xylar, Chen-7\n\n**Contemporary / Realistic**\n• Male: Ethan, Marcus, Julian, Leo, Samir\n• Female: Maya, Chloe, Priya, Zoe, Ingrid\n• Surnames: Park, Okafor, Reyes, Lindqvist, Patel\n\n**Dark / Gothic**\n• Male: Silas, Dorian, Viktor, Caspian, Alistair\n• Female: Vesper, Morgana, Lilith, Ophelia, Ravenna\n• Surnames: Crowe, Thornfield, Blackwell, Graves, Vane\n\n**Whimsical / Light**\n• Male: Milo, Finn, Pip, Oliver, Jasper\n• Female: Poppy, Luna, Daisy, Hazel, Winnie\n• Surnames: Bumble, Foxglove, Brightwing, Honeywell\n\nWant me to generate names based on a specific cultural origin or meaning?",
+        worldBuilding: "Let's build your world from the ground up:\n\n**1. The Physical World**\n• **Geography**: What are the 3 most distinctive landmarks?\n• **Climate**: How does weather shape daily life and culture?\n• **Resources**: What do people fight over? What's abundant?\n• **Creatures/Flora**: Any unique lifeforms? Dangerous? Sacred?\n\n**2. The Society**\n• **Government**: Who holds power? How did they get it?\n• **Economy**: What drives trade? What's the currency?\n• **Class System**: Can people move between classes? How?\n• **Religion/Beliefs**: What do people fear? What gives them hope?\n\n**3. The History**\n• **The Great Event**: What shaped the current era? (War, discovery, catastrophe)\n• **Legends**: What stories do parents tell children?\n• **Unresolved Tensions**: Old grudges that could spark conflict\n\n**4. The Daily Life**\n• **Food, Clothing, Shelter**: How do regular people live?\n• **Technology/Magic**: What's possible? What are the limits?\n• **Taboos**: What can you NEVER do or say?\n\n**5. The Conflict Engine**\n• What forces are pulling the world apart?\n• What would someone kill to protect or change?\n\nWant me to develop any of these layers in detail?",
+        dialogueTips: "Here are my top dialogue techniques:\n\n**1. The Subtext Rule**\nNever have characters say exactly what they mean. If someone asks \"Are you okay?\" and the answer is \"I'm fine,\" show us they're NOT fine through action:\n\n> \"I'm fine.\" She scrubbed the same plate for the third time, her knuckles white.\n\n**2. The Interrupt Technique**\nReal people talk over each other. Use em-dashes and interruptions:\n\n> \"I never said you could—\"\n> \"You didn't have to. Your face said it for you.\"\n\n**3. The Action Beat**\nBreak up dialogue with small actions that reveal character:\n\n> \"I trust you.\" He didn't look up from his phone.\n\n**4. The Distinct Voice**\nGive each character 2-3 verbal tics:\n• One always asks questions\n• One never uses contractions\n• One speaks in metaphors\n• One swears creatively\n\n**5. The Power Dynamic**\nWhoever asks the questions holds the power. Flip it:\n\n> \"Where were you last night?\"\n> \"Where do you think I was?\"\n\n**6. The Silence**\nSometimes what's NOT said is everything:\n\n> \"Do you love me?\"\n> He set down his coffee. Stood. Walked to the window.\n\nWant me to rewrite a scene of yours using these techniques?"
     };
 
     // Context tracking for more natural conversation
@@ -150,7 +155,21 @@ document.addEventListener('DOMContentLoaded', function() {
     function generateResponse(message) {
         const lowerMsg = message.toLowerCase();
         
-        // Determine category
+        // ===== CHECK FOR PROMPT CHIP MATCHES FIRST =====
+        if (lowerMsg.includes('outline') && lowerMsg.includes('chapter')) {
+            return aiResponses.outlineChapter;
+        }
+        if (lowerMsg.includes('character') && lowerMsg.includes('name')) {
+            return aiResponses.characterNames;
+        }
+        if (lowerMsg.includes('world') && lowerMsg.includes('building')) {
+            return aiResponses.worldBuilding;
+        }
+        if (lowerMsg.includes('dialogue') && (lowerMsg.includes('tip') || lowerMsg.includes('writing'))) {
+            return aiResponses.dialogueTips;
+        }
+        
+        // Determine category for regular messages
         let category = 'default';
         
         if (lowerMsg.match(/\b(hi|hello|hey|greetings|howdy|sup)\b/)) {
@@ -240,11 +259,12 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Prompt Chips
+    // Prompt Chips — now with specific responses
     promptChips.forEach(chip => {
         chip.addEventListener('click', () => {
             if (chatInput) {
-                chatInput.value = chip.textContent;
+                const chipText = chip.textContent.trim();
+                chatInput.value = chipText;
                 chatInput.focus();
                 // Auto-send after a brief delay for better UX
                 setTimeout(() => sendMessage(), 300);
