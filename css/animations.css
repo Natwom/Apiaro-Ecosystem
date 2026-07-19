@@ -1,0 +1,209 @@
+/* ============================================
+   APIARO — Animation Utilities & Keyframes
+   ============================================ */
+
+/* Fade In Up */
+.fade-in-up {
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+.fade-in-up-delay-1 { animation-delay: 0.1s; opacity: 0; }
+.fade-in-up-delay-2 { animation-delay: 0.2s; opacity: 0; }
+.fade-in-up-delay-3 { animation-delay: 0.3s; opacity: 0; }
+.fade-in-up-delay-4 { animation-delay: 0.4s; opacity: 0; }
+.fade-in-up-delay-5 { animation-delay: 0.5s; opacity: 0; }
+
+/* Fade In */
+.fade-in {
+    animation: fadeIn 0.5s ease forwards;
+}
+
+/* Slide In */
+.slide-in-left {
+    animation: slideInLeft 0.5s ease forwards;
+}
+
+.slide-in-right {
+    animation: slideInRight 0.5s ease forwards;
+}
+
+/* Scale In */
+.scale-in {
+    animation: scaleIn 0.4s ease forwards;
+}
+
+/* Typing cursor blink */
+.typing-cursor::after {
+    content: '|';
+    animation: blink 1s step-end infinite;
+    color: var(--primary);
+    margin-left: 2px;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* Shimmer loading effect */
+.shimmer {
+    background: linear-gradient(90deg, var(--bg-card) 25%, var(--bg-hover) 50%, var(--bg-card) 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+}
+
+/* Shake animation for errors */
+.shake {
+    animation: shake 0.5s ease;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+}
+
+/* Pulse ring animation */
+.pulse-ring {
+    animation: pulseRing 2s ease-out infinite;
+}
+
+@keyframes pulseRing {
+    0% { transform: scale(1); opacity: 0.5; }
+    100% { transform: scale(1.5); opacity: 0; }
+}
+
+/* Spin slow */
+.spin-slow {
+    animation: spin 3s linear infinite;
+}
+
+/* Bounce subtle */
+.bounce-subtle {
+    animation: bounceSubtle 2s ease-in-out infinite;
+}
+
+@keyframes bounceSubtle {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+}
+
+/* Glow pulse */
+.glow-pulse {
+    animation: glowPulse 2s ease-in-out infinite;
+}
+
+@keyframes glowPulse {
+    0%, 100% { box-shadow: 0 0 5px rgba(245, 124, 0, 0.3); }
+    50% { box-shadow: 0 0 20px rgba(245, 124, 0, 0.6); }
+}
+
+/* Card entrance stagger */
+.card-entrance {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: cardEntrance 0.5s ease forwards;
+}
+
+.card-entrance:nth-child(1) { animation-delay: 0.05s; }
+.card-entrance:nth-child(2) { animation-delay: 0.1s; }
+.card-entrance:nth-child(3) { animation-delay: 0.15s; }
+.card-entrance:nth-child(4) { animation-delay: 0.2s; }
+.card-entrance:nth-child(5) { animation-delay: 0.25s; }
+.card-entrance:nth-child(6) { animation-delay: 0.3s; }
+.card-entrance:nth-child(7) { animation-delay: 0.35s; }
+.card-entrance:nth-child(8) { animation-delay: 0.4s; }
+
+@keyframes cardEntrance {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Toast slide in */
+.toast-slide-in {
+    animation: toastSlideIn 0.3s ease forwards;
+}
+
+@keyframes toastSlideIn {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Modal backdrop fade */
+.modal-backdrop-fade {
+    animation: modalBackdropFade 0.3s ease forwards;
+}
+
+@keyframes modalBackdropFade {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Modal content scale */
+.modal-content-scale {
+    animation: modalContentScale 0.3s ease forwards;
+}
+
+@keyframes modalContentScale {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Progress bar fill */
+.progress-fill-animated {
+    animation: progressFill 1s ease forwards;
+}
+
+@keyframes progressFill {
+    from { width: 0; }
+}
+
+/* Number count up */
+.count-up {
+    display: inline-block;
+}
+
+/* Hover lift */
+.hover-lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
+/* Gradient text animation */
+.gradient-text-animated {
+    background: linear-gradient(90deg, var(--primary), var(--primary-light), var(--primary));
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gradientText 3s ease infinite;
+}
+
+@keyframes gradientText {
+    0% { background-position: 0% center; }
+    50% { background-position: 100% center; }
+    100% { background-position: 0% center; }
+}

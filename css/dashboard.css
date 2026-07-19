@@ -1,0 +1,32 @@
+/* ============================================
+   APIARO — Dashboard Specific Styles
+   ============================================ */
+
+/* Dashboard already styled in style.css, this file extends it */
+
+.dashboard-grid .product-card {
+    cursor: pointer;
+}
+
+.dashboard-grid .product-card .btn {
+    margin-top: auto;
+}
+
+/* Dashboard loading animation */
+.dashboard-main .loader-text {
+    font-size: 18px;
+}
+
+/* Product card hover glow for live products */
+.product-card[data-status="live"]:hover {
+    box-shadow: 0 8px 32px rgba(245, 124, 0, 0.15);
+}
+
+/* Coming soon card subtle styling */
+.product-card[data-status="coming-soon"] {
+    opacity: 0.9;
+}
+
+.product-card[data-status="coming-soon"]:hover {
+    opacity: 1;
+}
